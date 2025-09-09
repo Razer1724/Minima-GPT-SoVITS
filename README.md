@@ -27,9 +27,8 @@ If you have any ideas, want to pr or collaborate, feel free to do so.
 >   - Remove bloat
 > - Remove GPT-SoVITS voice changer
 > - Remove 达摩 ASR
-> - BF16 Support
-> - Using only oen WebUI not multiple
  
 Ideas \ concepts
-> - Currently none. Open to ideas
+> - BF16 Support
+> - Using only one WebUI not multiple
 </a>
