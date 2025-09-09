@@ -14,6 +14,34 @@ If you have any ideas, want to pr or collaborate, feel free to do so.
 ### This project is a massive WIP so expect things to not be finished ( like this readme ).
 
 ---
+
+## Installation
+
+If you are a Windows user (tested with win10) you can install the program by running the following command:
+
+```pwsh
+install.bat CU128 HF
+```
+You could also change what cuda version you install and the source.
+```pwsh
+install.bat [Device] [Source]
+```
+
+For `[Device]` you can choose between:
+```pwsh
+CU128: For NVIDIA GPUs with CUDA 12.8 support.
+CU126: For NVIDIA GPUs with CUDA 12.6 support.
+CPU:   For CPU-only installation.
+```
+
+For `[Source]` you can choose between:
+```pwsh
+HF:        HuggingFace (Default)
+HF-Mirror: HuggingFace Mirror
+ModelScope: Alibaba ModelScope
+```
+
+---
  
  <br/>
  
