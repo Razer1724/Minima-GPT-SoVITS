@@ -18,15 +18,20 @@ If you have any ideas, want to pr or collaborate, feel free to do so.
  <br/>
  
  to-do list ( Not in order )
-> - Remove UVR
 > - Rename files \ folders so they make more sense
 > - Minimize how many folders are created \ needed
 > - Make nicer UI \ redo UI
->   - Dark mode 😡
 >   - Rename modules to make more sense \ more descriptive
 >   - Remove bloat
+> - Remove 达摩 ASR ( Almost done )
+
+ Completed ( Not in order )
+> - Remove UVR
+> - Make nicer UI \ redo UI
+>   - Dark mode
+>   - Removed *some* bloat
 > - Remove GPT-SoVITS voice changer
-> - Remove 达摩 ASR
+> - Remove 达摩 ASR ( Almost done )
  
 Ideas \ concepts
 > - BF16 Support
