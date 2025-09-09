@@ -1,1 +1,35 @@
-# Minima-GPT-SoVITS
+# <p align="center">` Minima GPT-SoVITS ` </p>
+## <p align="center">Based on GPT-SoVITS</p>
+
+---
+
+## Info about the project:
+
+### This is pretty much my personal take on making GPT-SoVITS more organized and less boated.
+If you have any ideas, want to pr or collaborate, feel free to do so.
+<br/>
+
+---
+
+### This project is a massive WIP so expect things to not be finished ( like this readme ).
+
+---
+ 
+ <br/>
+ 
+ to-do list ( Not in order )
+> - Remove UVR
+> - Rename files \ folders so they make more sense
+> - Minimize how many folders are created \ needed
+> - Make nicer UI \ redo UI
+>   - Dark mode 😡
+>   - Rename modules to make more sense \ more descriptive
+>   - Remove bloat
+> - Remove GPT-SoVITS voice changer
+> - Remove 达摩 ASR
+> - BF16 Support
+> - Using only oen WebUI not multiple
+ 
+Ideas \ concepts
+> - Currently none. Open to ideas
+</a>
