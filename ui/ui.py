@@ -156,7 +156,7 @@ def create_ui():
                                     value="large",
                                 )
                                 asr_lang = gr.Dropdown(
-                                    label=("ASR language"), choices=["en", "zh"], interactive=True, value="en"
+                                    label=("ASR language"), choices=["zh", "en", "ja", "ko", "yue"], interactive=True, value="en"
                                 )
                                 asr_precision = gr.Dropdown(
                                     label=("Precision"),

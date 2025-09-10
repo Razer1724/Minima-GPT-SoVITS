@@ -69,7 +69,7 @@ from tools.assets import css, js, top_html
 
 from multiprocessing import cpu_count
 
-from config import (
+from GPT_SoVITS.configs.config import (
     GPU_INDEX,
     GPU_INFOS,
     IS_GPU,
@@ -178,7 +178,7 @@ def fix_gpu_numbers(inputs):
         return inputs
 
 
-from config import pretrained_gpt_name, pretrained_sovits_name
+from GPT_SoVITS.configs.config import pretrained_gpt_name, pretrained_sovits_name
 
 
 def check_pretrained_is_exist(version):
@@ -205,7 +205,7 @@ for key in pretrained_gpt_name.keys():
     if os.path.exists(pretrained_gpt_name[key]) == False:
         pretrained_gpt_name[key] = ""
 
-from config import (
+from GPT_SoVITS.configs.config import (
     GPT_weight_root,
     GPT_weight_version2root,
     SoVITS_weight_root,
@@ -519,9 +519,9 @@ def open1Ba(
         with open(tmp_config_path, "w") as f:
             f.write(json.dumps(data))
         if version in ["v1", "v2", "v2Pro", "v2ProPlus"]:
-            cmd = '"%s" -s GPT_SoVITS/s2_train.py --config "%s"' % (python_exec, tmp_config_path)
+            cmd = '"%s" -s GPT_SoVITS/train/s2_train.py --config "%s"' % (python_exec, tmp_config_path)
         else:
-            cmd = '"%s" -s GPT_SoVITS/s2_train_v3_lora.py --config "%s"' % (python_exec, tmp_config_path)
+            cmd = '"%s" -s GPT_SoVITS/train/s2_train_v3_lora.py --config "%s"' % (python_exec, tmp_config_path)
         yield (
             process_info(process_name_sovits, "opened"),
             {"__type__": "update", "visible": False},
@@ -611,7 +611,7 @@ def open1Bb(
         tmp_config_path = "%s/tmp_s1.yaml" % tmp
         with open(tmp_config_path, "w") as f:
             f.write(yaml.dump(data, default_flow_style=False))
-        cmd = '"%s" -s GPT_SoVITS/s1_train.py --config_file "%s" ' % (python_exec, tmp_config_path)
+        cmd = '"%s" -s GPT_SoVITS/train/s1_train.py --config_file "%s" ' % (python_exec, tmp_config_path)
         yield (
             process_info(process_name_gpt, "opened"),
             {"__type__": "update", "visible": False},

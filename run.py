@@ -1,5 +1,5 @@
 from ui.ui import create_ui
-from config import is_share, webui_port_main
+from GPT_SoVITS.configs.config import is_share, webui_port_main
 
 if __name__ == "__main__":
     app = create_ui()
