@@ -45,7 +45,7 @@ ModelScope: Alibaba ModelScope
 Once you have gone through the installation steps you can go-ahead and either double click `go-webui.bat` or type this into the command line:
 
 ```pwsh
-go-webui.bat
+start.bat
 ```
 
 ---
