@@ -23,15 +23,15 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
 
     def __init__(self, hparams, version=None, val=False):
         exp_dir = hparams.exp_dir
-        self.path2 = "%s/2-name2text.txt" % exp_dir
-        self.path4 = "%s/4-cnhubert" % exp_dir
-        self.path5 = "%s/5-wav32k" % exp_dir
+        self.path2 = "%s/name2text.txt" % exp_dir
+        self.path4 = "%s/cn_hubert" % exp_dir
+        self.path5 = "%s/32k_audio" % exp_dir
         assert os.path.exists(self.path2)
         assert os.path.exists(self.path4)
         assert os.path.exists(self.path5)
         self.is_v2Pro = version in {"v2Pro", "v2ProPlus"}
         if self.is_v2Pro:
-            self.path7 = "%s/7-sv_cn" % exp_dir
+            self.path7 = "%s/sv_cn" % exp_dir
             assert os.path.exists(self.path7)
         names4 = set([name[:-3] for name in list(os.listdir(self.path4))])  # 去除.pt后缀
         names5 = set(os.listdir(self.path5))
@@ -285,9 +285,9 @@ class TextAudioSpeakerLoaderV3(torch.utils.data.Dataset):
 
     def __init__(self, hparams, val=False):
         exp_dir = hparams.exp_dir
-        self.path2 = "%s/2-name2text.txt" % exp_dir
-        self.path4 = "%s/4-cnhubert" % exp_dir
-        self.path5 = "%s/5-wav32k" % exp_dir
+        self.path2 = "%s/name2text.txt" % exp_dir
+        self.path4 = "%s/cn_hubert" % exp_dir
+        self.path5 = "%s/32k_audio" % exp_dir
         assert os.path.exists(self.path2)
         assert os.path.exists(self.path4)
         assert os.path.exists(self.path5)
@@ -523,9 +523,9 @@ class TextAudioSpeakerLoaderV4(torch.utils.data.Dataset):
 
     def __init__(self, hparams, val=False):
         exp_dir = hparams.exp_dir
-        self.path2 = "%s/2-name2text.txt" % exp_dir
-        self.path4 = "%s/4-cnhubert" % exp_dir
-        self.path5 = "%s/5-wav32k" % exp_dir
+        self.path2 = "%s/name2text.txt" % exp_dir
+        self.path4 = "%s/cn_hubert" % exp_dir
+        self.path5 = "%s/32k_audio" % exp_dir
         assert os.path.exists(self.path2)
         assert os.path.exists(self.path4)
         assert os.path.exists(self.path5)
@@ -734,9 +734,9 @@ class TextAudioSpeakerLoaderV3b(torch.utils.data.Dataset):
 
     def __init__(self, hparams, val=False):
         exp_dir = hparams.exp_dir
-        self.path2 = "%s/2-name2text.txt" % exp_dir
-        self.path4 = "%s/4-cnhubert" % exp_dir
-        self.path5 = "%s/5-wav32k" % exp_dir
+        self.path2 = "%s/name2text.txt" % exp_dir
+        self.path4 = "%s/cn_hubert" % exp_dir
+        self.path5 = "%s/32k_audio" % exp_dir
         assert os.path.exists(self.path2)
         assert os.path.exists(self.path4)
         assert os.path.exists(self.path5)
