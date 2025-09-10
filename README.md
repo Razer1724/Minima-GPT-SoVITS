@@ -54,11 +54,8 @@ go-webui.bat
  
  to-do list ( Not in order )
 > - Rename files \ folders so they make more sense
-> - Minimize how many folders are created \ needed
 > - Make nicer UI \ redo UI
 >   - Rename modules to make more sense \ more descriptive
->   - Remove bloat
-> - Remove 达摩 ASR ( Almost done )
 
  Completed ( Not in order )
 > - Remove UVR
@@ -66,7 +63,8 @@ go-webui.bat
 >   - Dark mode
 >   - Removed *some* bloat
 > - Remove GPT-SoVITS voice changer
-> - Remove 达摩 ASR ( Almost done )
+> - Remove 达摩 ASR
+> - Minimize how many folders are created \ needed
  
 Ideas \ concepts
 > - BF16 Support
