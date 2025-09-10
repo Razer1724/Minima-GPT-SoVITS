@@ -32,16 +32,16 @@ if not defined SOURCE (
 echo [INFO]: Checking for Python virtual environment...
 
 if exist "runtime\Scripts\activate.bat" (
-    echo [INFO]: Virtual environment 'runtime' already exists. Activating it.
+    echo [INFO]: Virtual environment 'env' already exists. Activating it.
 ) else (
     echo [INFO]: Virtual environment not found. Creating it now...
-    python -m venv runtime
+    python -m venv env
     call :check_error
     echo [SUCCESS]: Virtual environment 'runtime' created.
 )
 
 :: Activate the virtual environment for this script session
-call runtime\Scripts\activate
+call env\Scripts\activate
 call :check_error
 echo [SUCCESS]: Virtual environment activated.
 :: ============================================================================
@@ -199,4 +199,5 @@ echo   [Source]: HF, HF-Mirror, ModelScope
 echo.
 echo   Example: install.bat CU128 HF
 echo.
+
 exit /b 1
