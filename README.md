@@ -22,19 +22,19 @@ If you are a Windows user (tested with win10) you can install the program by run
 ```pwsh
 install.bat CU128 HF
 ```
-You could also change what cuda version you install and the source.
+You can change what cuda version you install and the source of pretrained files.
 ```pwsh
-install.bat [Device] [Source]
+install.bat <Device> <Source>
 ```
 
-For `[Device]` you can choose between:
+For `<Device>` you can choose between:
 ```pwsh
 CU128: For NVIDIA GPUs with CUDA 12.8 support.
 CU126: For NVIDIA GPUs with CUDA 12.6 support.
 CPU:   For CPU-only installation.
 ```
 
-For `[Source]` you can choose between:
+For `<Source>` you can choose between:
 ```pwsh
 HF:        HuggingFace (Default)
 HF-Mirror: HuggingFace Mirror
