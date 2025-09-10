@@ -42,7 +42,7 @@ ModelScope: Alibaba ModelScope
 ```
 ## Running
 
-Once you have gone through the installation steps you can go-ahead and either double click `go-webui.bat` or type this into the command line:
+Once you have gone through the installation steps you can go-ahead and either double click `start.bat` or type this into the command line:
 
 ```pwsh
 start.bat
