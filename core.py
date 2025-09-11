@@ -111,8 +111,8 @@ process_name_subfix = (" Transcription Proofreading WebUI ")
 process_name_tts = (" TTS Inference WebUI ")
 process_name_asr = (" Speech Transcription ")
 process_name_denoise = ("Speech Denoising")
-process_name_sovits = ("SoVITS Training")
-process_name_gpt = ("GPT Training")
+process_name_sovits = ("SoVITS Training ")
+process_name_gpt = ("GPT Training ")
 process_name_slice = (" Speech Slicing ")
 
 #     ---------- Process names ----------
