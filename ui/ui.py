@@ -1,4 +1,5 @@
 import gradio as gr
+import os
 from core import (
     change_label,
     change_tts_inference,
@@ -55,11 +56,17 @@ from core import (
     process_name_tts,
     css,
     js,
+    exp_root,
 )
+
+def update_paths(exp_name):
+    sliced_path = os.path.join(exp_root, exp_name, "sliced_audio")
+    transcribed_path = os.path.join(exp_root, exp_name, "transcribed_audio")
+    return sliced_path, transcribed_path
 
 def create_ui():
     with gr.Blocks(title="GPT-SoVITS WebUI", analytics_enabled=False, js=js, css=css) as app:
-
+        
         with gr.Tabs():
             with gr.TabItem(("Dataset Preprocessing")):
                 with gr.Accordion(("Speech Slicing")):
@@ -68,7 +75,7 @@ def create_ui():
                             with gr.Row():
                                 slice_inp_path = gr.Textbox(label=("Speech slicer input (file or folder)"), value="")
                                 slice_opt_root = gr.Textbox(
-                                    label=("Speech slicer output folder"), value="output/sliced_speech"
+                                    label=("Speech slicer output folder"), value=os.path.join(exp_root, "model_name", "sliced_audio")
                                 )
                             with gr.Row():
                                 threshold = gr.Textbox(
@@ -140,7 +147,7 @@ def create_ui():
                                     label=("Input folder path"), value="D:\\GPT-SoVITS\\raw\\xxx", interactive=True
                                 )
                                 asr_opt_dir = gr.Textbox(
-                                    label=("Output folder path"), value="output/transcribed_audio", interactive=True
+                                    label=("Output folder path"), value=os.path.join(exp_root, "model_name", "transcribed_audio"), interactive=True
                                 )
                             with gr.Row():
                                 asr_model = gr.Dropdown(
@@ -545,6 +552,12 @@ def create_ui():
 
             pretrained_s2G.change(sync, [pretrained_s2G], [pretrained_s2G_])
             
+            exp_name.change(
+                fn=update_paths,
+                inputs=[exp_name],
+                outputs=[slice_opt_root, asr_opt_dir]
+            )
+
             button1a_open.click(
                 open1a,
                 [inp_text, inp_wav_dir, exp_name, gpu_numbers1a, bert_pretrained_dir],
